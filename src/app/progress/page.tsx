@@ -58,9 +58,9 @@ export default function ProgressPage() {
 
         <div className="grid gap-4 sm:grid-cols-3">
           <Stat label="Точність" value={`${acc}%`} />
-          <Stat label="Спрк" value={String(attempts.length)} />
+          <Stat label="Спроб" value={String(attempts.length)} />
           <Stat
-            label="Рівеоь"
+            label="Рівень"
             value={diffLabel[difficulty]}
           />
         </div>
