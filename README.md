@@ -32,3 +32,35 @@ cp .env.example .env.local
 ## Стек
 
 Next.js (App Router) · TypeScript · Tailwind · shadcn/ui · KaTeX · Zustand
+
+
+## Робота: Mac + GitHub (основне)
+
+Джерело правди: https://github.com/kaiserdem/AI-Math-Tutor  
+Хмарний агент — лише тимчасова копія; на Mac код потрапляє через GitHub.
+
+### Перший раз на Mac
+
+У **Terminal** на своєму Mac:
+
+```bash
+mkdir -p ~/Documents/Developer
+cd ~/Documents/Developer
+git clone https://github.com/kaiserdem/AI-Math-Tutor.git "AI Math Tutor"
+cd "AI Math Tutor"
+npm install
+npm run dev
+```
+
+Відкрий http://127.0.0.1:43247
+
+Далі відкривай папку `~/Documents/Developer/AI Math Tutor` у Cursor і працюй локально (`git pull` / `git push`).
+
+### Якщо папка вже є
+
+```bash
+cd ~/Documents/Developer/"AI Math Tutor"
+git pull
+npm install
+npm run dev
+```
