@@ -177,7 +177,7 @@ function TutorInner() {
             {listening ? "Слухаю…" : "Голос"}
           </Button>
           <Button type="submit" className="flex-1" disabled={pending || !input.trim()}>
-            <Send className="size-4" />
+            <Send className="size=4" />
             Надіслати
           </Button>
         </div>
