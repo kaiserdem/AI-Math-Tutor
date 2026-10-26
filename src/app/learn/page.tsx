@@ -22,7 +22,7 @@ export default function LearnPage() {
           Курс
         </h1>
         <p className="mt-2 text-[color:var(--mist)]">
-          Сходинка тем у стилі класичної програми: спочатку міцна база, далі блгебра й геометрія.
+          Сходинка тем у стилі класичної програми: спочатку міцна база, далі алгебра й геометрія.
         </p>
         <div className="mt-6">
           <div className="mb-2 flex justify-between text-sm text-[color:var(--mist)]">
