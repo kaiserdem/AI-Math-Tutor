@@ -1,38 +1,35 @@
 import type { Metadata } from "next";
-import { Manrope, Literata } from "next/font/google";
+import { Literata, Manrope } from "next/font/google";
 import { SiteHeader } from "@/components/layout/site-header";
 import "./globals.css";
-
-const sans = Manrope({
-  variable: "--font-sans",
-  subsets: ["latin", "cyrillic"],
-});
 
 const display = Literata({
   variable: "--font-display",
   subsets: ["latin", "cyrillic"],
+  weight: ["500", "600", "700"],
+});
+
+const body = Manrope({
+  variable: "--font-body",
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
   title: "Основа — AI-репетитор з математики",
   description:
-    "Інтерактивний репетитор з математики: курс радянської школи, практика на дошці, прогрес для батьків.",
+    "Персоналізована математична освіта в дусі класичної школи: AI-репетитор, адаптивна практика, дошка й прогрес.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="uk">
-      <body
-        className={`${sans.variable} ${display.variable} antialiased min-h-screen`}
-      >
+    <html
+      lang="uk"
+      className={`${display.variable} ${body.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col font-[family-name:var(--font-body)]">
         <SiteHeader />
-        <main className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
-          {children}
-        </main>
+        <main className="flex-1">{children}</main>
       </body>
     </html>
   );
